@@ -11,12 +11,9 @@ const Channel = () => {
             </div>
             <div className="main_addBtn">
                 <AddBtn></AddBtn>
-                
             </div>
         </div>
-        <div className="main_contact">
             <Contact></Contact>
-        </div>
         </div>
     );
 };

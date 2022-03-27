@@ -2,7 +2,6 @@ import React from 'react';
 
 interface Props {
     contact: {
-        avatar:string,
         name:string,
         firstname:string,
         message:string,
