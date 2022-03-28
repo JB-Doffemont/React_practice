@@ -4,15 +4,28 @@
 }
 
 /**
+* Main container
+*/
+
+.main_container {
+  width: 27rem;
+  margin: auto;
+}
+
+/**
 * Top style
 */
 
 .main_top {
   display: flex;
   width: 23.5rem;
-  justify-content: space-around;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  justify-content: center;
   align-items: center;
   text-align: center;
+  margin-left: 4rem;
+  gap: 4rem;
 }
 
 /**
@@ -21,6 +34,11 @@
 
 .main_title {
   max-width: 10rem;
+  text-decoration: underline;
+  text-decoration-thickness: 0.1rem;
+  text-underline-offset: 4px;
+  line-height: 1;
+  letter-spacing: -1px;
 }
 
 /**
@@ -33,5 +51,32 @@
   border-radius: 4rem;
   border: none;
   font-size: 2.2rem;
-  color: grey;
+  color: #818181;
+}
+
+/**
+* Contact style
+*/
+
+.main_contactContainer {
+  width: 23.5rem;
+  width: 21.5rem;
+  margin: auto;
+  box-shadow: 0 0 2em lightgrey;
+  border-radius: 10px;
+}
+
+.main_cardContainer {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+  height: 5rem;
+}
+
+/**
+* Card style
+*/
+
+.main_cardImg {
+  margin: 0 0.4rem;
 }

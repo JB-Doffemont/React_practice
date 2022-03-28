@@ -13,11 +13,18 @@ interface Props {
 
 const Card = ({contact, index}:Props) => {
     return (
-        <div key={index}>
-            <img src={`${contact.avatar}`} alt="avatar" />
-            <h4>{contact.name}{contact.firstname}</h4>
-            <p>{contact.message}</p>
-            
+        <div className='main_cardContainer' key={index}>
+            <div className="main_cardImg">
+                <img src={`${contact.avatar}`} alt="avatar" />
+            </div>
+            <div>
+                <div className="main_cardInfos">
+                    <h4>{contact.firstname} {contact.name}</h4>
+                </div>
+                <div className="main_cardMessage">
+                    <p>{contact.message}</p>
+                </div>
+            </div>
         </div>
     );
 };
