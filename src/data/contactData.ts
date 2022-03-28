@@ -9,7 +9,7 @@
         avatar: "./avatar.jpg",
         name: "Carpentier",
         firstname: "Mélanie",
-        message: "Ok pour demain, je prend ce qu'il faut !",
+        message: "Ok pour demain, je prend...",
     },
     {
         avatar: "./avatar.jpg",
