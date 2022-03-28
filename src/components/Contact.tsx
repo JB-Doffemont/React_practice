@@ -20,6 +20,12 @@ const Contact = () => {
                 </div>
               );
                })}
+                <div className="heart"></div>
+                <div className="number">
+                  <div> 
+                    <p>13</p>
+                  </div>
+                </div>
         </div>
     );
 };

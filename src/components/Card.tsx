@@ -25,6 +25,7 @@ const Card = ({contact, index}:Props) => {
                     <p>{contact.message}</p>
                 </div>
             </div>
+            
         </div>
     );
 };
