@@ -11,8 +11,6 @@ const Channel = () => {
             <div className="main_title">
                 <h1>Mes discussions</h1>  <p>({contactData.length})</p>
             </div>
-            
-            
             <div className="main_addBtn">
                 <AddBtn></AddBtn>
             </div>

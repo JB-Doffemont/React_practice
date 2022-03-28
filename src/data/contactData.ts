@@ -25,7 +25,7 @@
     },
     {
         avatar: "./img/avatar.jpg",
-        name: "Leger",
+        name: "Angels",
         firstname: "Louise",
         message: "Je pars pour Paris dans 4 heures",
     },

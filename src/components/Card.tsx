@@ -10,7 +10,6 @@ interface Props {
     index: number;
 }
 
-
 const Card = ({contact, index}:Props) => {
     return (
         <div className='main_cardContainer' key={index}>
@@ -25,7 +24,6 @@ const Card = ({contact, index}:Props) => {
                     <p>{contact.message}</p>
                 </div>
             </div>
-            
         </div>
     );
 };
