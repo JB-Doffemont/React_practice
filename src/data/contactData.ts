@@ -1,9 +1,9 @@
  export const contactData : {avatar: string, name: string, firstname: string, message: string}[] = [
     {
-        avatar: "./avatar.jpg",
-        name: "Duprès",
-        firstname: "Louis",
-        message: "Content de t'avoir revu...",
+        avatar: "./anthony.jpg",
+        name: "Busnel",
+        firstname: "Anthony",
+        message: "Bravo pour l'exercice...XD",
     },
     {
         avatar: "./avatar.jpg",

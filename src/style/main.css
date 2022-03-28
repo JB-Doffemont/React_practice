@@ -109,5 +109,58 @@ img {
   justify-content: center;
   position: absolute;
   top: 10.5rem;
-  left: 22rem;
+  left: 20rem;
+}
+
+.heart {
+  position: absolute;
+  top: 15.5rem;
+  left: 20rem;
+}
+
+.heart img {
+  height: 2.3rem;
+  width: 2.3rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .number {
+    position: absolute;
+    top: 10.5rem;
+    left: 31rem;
+  }
+
+  .heart {
+    position: absolute;
+    top: 15.5rem;
+    left: 31rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .number {
+    position: absolute;
+    top: 10.5rem;
+    left: 39rem;
+  }
+
+  .heart {
+    position: absolute;
+    top: 15.5rem;
+    left: 39rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .number {
+    position: absolute;
+    top: 10.5rem;
+    left: 53rem;
+  }
+
+  .heart {
+    position: absolute;
+    top: 15.5rem;
+    left: 53rem;
+  }
 }

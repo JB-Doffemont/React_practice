@@ -6,7 +6,7 @@ import Card from './Card';
 
 const Contact = () => {
 
-    const [contact] = useState({contactData});
+    // const [contact] = useState({contactData});
     return (
         <div className='main_contactContainer'>
            
@@ -20,7 +20,9 @@ const Contact = () => {
                 </div>
               );
                })}
-                <div className="heart"></div>
+                <div className="heart">
+                  <img src="./heart.jpg" alt="" />
+                </div>
                 <div className="number">
                   <div> 
                     <p>13</p>
