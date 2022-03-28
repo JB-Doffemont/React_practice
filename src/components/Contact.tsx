@@ -21,7 +21,7 @@ const Contact = () => {
               );
                })}
                 <div className="heart">
-                  <img src="./heart.jpg" alt="" />
+                  <img src="./img/heart.jpg" alt="" />
                 </div>
                 <div className="number">
                   <div> 
