@@ -20,14 +20,6 @@ const Contact = () => {
                 </div>
               );
                })}
-                <div className="heart">
-                  <img src="./img/heart.jpg" alt="" />
-                </div>
-                <div className="number">
-                  <div> 
-                    <p>13</p>
-                  </div>
-                </div>
         </div>
     );
 };
