@@ -1,4 +1,3 @@
-import { StatusBar } from "expo-status-bar";
 import { useState } from "react";
 import { StyleSheet, Text, View, TextInput } from "react-native";
 
@@ -29,6 +28,7 @@ export default function App() {
         placeholder="Tap your password here"
         value={password}
         onChangeText={setPassword}
+        secureTextEntry
       />
       <InputWithLabel
         label="Name"
@@ -59,7 +59,7 @@ export default function App() {
 }
 
 function InputWithLabel(props) {
-  const { label, placeholder, value, onChangeText } = props;
+  const { label, placeholder, value, onChangeText, secureTextEntry } = props;
   return (
     <View>
       <Text>{label}</Text>
@@ -68,6 +68,7 @@ function InputWithLabel(props) {
         placeholder={placeholder}
         value={value}
         onChangeText={onChangeText}
+        secureTextEntry={secureTextEntry}
       />
     </View>
   );
