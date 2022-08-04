@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { StyleSheet, Text, View, TextInput, Button } from "react-native";
+import { StyleSheet, Text, View, TextInput, ScrollView } from "react-native";
 
 export default function App() {
   const [email, setEmail] = useState("");
@@ -20,59 +20,54 @@ export default function App() {
   }
 
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#ecf0f1",
-      }}
-    >
-      <InputWithLabel
-        label="Email"
-        placeholder="Tap your Email here"
-        value={email}
-        onChangeText={setEmail}
-      />
-      <InputWithLabel
-        label="Password"
-        placeholder="Tap your password here"
-        value={password}
-        onChangeText={setPassword}
-        secureTextEntry
-      />
-      <InputWithLabel
-        label="Confirm Password"
-        placeholder="Re-tap your password here"
-        value={confirmPassword}
-        onChangeText={setConfirmPassword}
-        onSubmitEditing={matchPassword}
-        secureTextEntry
-      />
-      <InputWithLabel
-        label="Name"
-        placeholder="Tap your pet's name here"
-        value={name}
-        onChangeText={setName}
-      />
-      <InputWithLabel
-        label="Date of birth"
-        placeholder="Tap your pet's birthday here"
-        value={dob}
-        onChangeText={setDob}
-      />
-      <InputWithLabel
-        label="Breed"
-        placeholder="Tap your pet's breed here"
-        value={breed}
-        onChangeText={setBreed}
-      />
-      <InputWithLabel
-        label="Favorite Toy"
-        placeholder="Tap your pet's favorite toy here"
-        value={toy}
-        onChangeText={setToy}
-      />
+    <View style={styles.inputsView}>
+      <ScrollView>
+        <InputWithLabel
+          label="Email"
+          placeholder="Tap your Email here"
+          value={email}
+          onChangeText={setEmail}
+        />
+        <InputWithLabel
+          label="Password"
+          placeholder="Tap your password here"
+          value={password}
+          onChangeText={setPassword}
+          secureTextEntry
+        />
+        <InputWithLabel
+          label="Confirm Password"
+          placeholder="Re-tap your password here"
+          value={confirmPassword}
+          onChangeText={setConfirmPassword}
+          onSubmitEditing={matchPassword}
+          secureTextEntry
+        />
+        <InputWithLabel
+          label="Name"
+          placeholder="Tap your pet's name here"
+          value={name}
+          onChangeText={setName}
+        />
+        <InputWithLabel
+          label="Date of birth"
+          placeholder="Tap your pet's birthday here"
+          value={dob}
+          onChangeText={setDob}
+        />
+        <InputWithLabel
+          label="Breed"
+          placeholder="Tap your pet's breed here"
+          value={breed}
+          onChangeText={setBreed}
+        />
+        <InputWithLabel
+          label="Favorite Toy"
+          placeholder="Tap your pet's favorite toy here"
+          value={toy}
+          onChangeText={setToy}
+        />
+      </ScrollView>
     </View>
   );
 }
@@ -88,7 +83,7 @@ function InputWithLabel(props) {
   } = props;
   return (
     <View>
-      <Text>{label}</Text>
+      <Text style={styles.label}>{label}</Text>
       <TextInput
         style={styles.input}
         placeholder={placeholder}
@@ -102,6 +97,16 @@ function InputWithLabel(props) {
 }
 
 const styles = StyleSheet.create({
+  inputsView: {
+    padding: 18,
+    backgroundColor: "#ecf0f1",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  label: {
+    padding: 8,
+    fontSize: 18,
+  },
   input: {
     height: 40,
     margin: 12,
