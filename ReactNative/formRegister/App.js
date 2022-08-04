@@ -1,13 +1,24 @@
 import { useState } from "react";
-import { StyleSheet, Text, View, TextInput } from "react-native";
+import { StyleSheet, Text, View, TextInput, Button } from "react-native";
 
 export default function App() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [name, setName] = useState("");
   const [dob, setDob] = useState("");
   const [breed, setBreed] = useState("");
   const [toy, setToy] = useState("");
+
+  function matchPassword(props) {
+    const {
+      nativeEvent: { text },
+    } = props;
+    if (text !== password) {
+      alert("Passwords do not match, please try again.");
+    }
+  }
+
   return (
     <View
       style={{
@@ -28,6 +39,14 @@ export default function App() {
         placeholder="Tap your password here"
         value={password}
         onChangeText={setPassword}
+        secureTextEntry
+      />
+      <InputWithLabel
+        label="Confirm Password"
+        placeholder="Re-tap your password here"
+        value={confirmPassword}
+        onChangeText={setConfirmPassword}
+        onSubmitEditing={matchPassword}
         secureTextEntry
       />
       <InputWithLabel
@@ -59,7 +78,14 @@ export default function App() {
 }
 
 function InputWithLabel(props) {
-  const { label, placeholder, value, onChangeText, secureTextEntry } = props;
+  const {
+    label,
+    placeholder,
+    value,
+    onChangeText,
+    secureTextEntry,
+    onSubmitEditing,
+  } = props;
   return (
     <View>
       <Text>{label}</Text>
@@ -69,6 +95,7 @@ function InputWithLabel(props) {
         value={value}
         onChangeText={onChangeText}
         secureTextEntry={secureTextEntry}
+        onSubmitEditing={onSubmitEditing}
       />
     </View>
   );
