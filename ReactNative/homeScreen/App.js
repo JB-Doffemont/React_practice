@@ -77,7 +77,7 @@ const woofCardStyles = StyleSheet.create({
 });
 
 const WoofPost = (props) => (
-  <View style={{ alignItems: "center", justifyContent: "center" }}>
+  <View>
     <View style={woofPostStyles.layout}>
       <Image source={{ uri: props.image }} style={woofPostStyles.image} />
       <View style={woofPostStyles.content}>
@@ -116,22 +116,21 @@ const HomeScreen = () => (
     <ScrollView>
       <Heading>Trending woofs</Heading>
       <ScrollView horizontal>
-        <WoofCard
-          name="Rex"
-          avatar="https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=648&q=80"
-        />
-        <WoofCard
-          name="Rex"
-          avatar="https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=648&q=80"
-        />
+        {data.woofs.map((woof) => (
+          <WoofCard key={woof.id} name={woof.name} avatar={woof.avatar} />
+        ))}
       </ScrollView>
 
       <Heading>New Woof Posts</Heading>
-      <WoofPost
-        image="https://images.unsplash.com/photo-1544568100-847a948585b9?auto=format&fit=crop&w=967&q=80"
-        title="Happy Woofs"
-        description="How to keep your woof health and happy. We've asked some of the best experts out there."
-      />
+
+      {data.posts.map((post) => (
+        <WoofPost
+          key={post.id}
+          image={post.image}
+          title={post.title}
+          description={post.description}
+        />
+      ))}
     </ScrollView>
   </View>
 );
