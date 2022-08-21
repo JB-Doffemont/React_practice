@@ -4,7 +4,7 @@ function Cart() {
   const flowerPrice = 15;
   return (
     <div>
-      <h2>Panier</h2>
+      <h2>Pannier</h2>
       <ul>
         <li>Monstera : {monsteraPrice}€</li>
         <li>Lierre : {ivyPrice}€</li>
