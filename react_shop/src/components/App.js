@@ -2,12 +2,14 @@ import "../App.css";
 
 import Banner from "./Banner.js";
 import Cart from "./Cart";
+import ShoppingList from "./ShoppingList";
 
 function App() {
   return (
     <div>
       <Banner />
-      <Cart />;
+      <Cart />
+      <ShoppingList />;
     </div>
   );
 }
