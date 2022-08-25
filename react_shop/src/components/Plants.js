@@ -1,6 +1,7 @@
 import { plantList } from "../data/plantList";
+import CareScale from "./CareScale";
 
-function Soldes() {
+function Plants() {
   return plantList.map((plant) => (
     <div key={plant.id}>
       <div>
@@ -8,6 +9,8 @@ function Soldes() {
           {plant.name}
           <div>
             {plant.isSpecialOffer && <div className="lmj-sales">Soldes !</div>}
+            <CareScale careType={"light"} scaleValue={plant.light} />
+            <CareScale careType={"water"} scaleValue={plant.water} />
           </div>
         </li>
       </div>
@@ -15,4 +18,4 @@ function Soldes() {
   ));
 }
 
-export default Soldes;
+export default Plants;
