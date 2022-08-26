@@ -1,4 +1,5 @@
 import CareScale from "./CareScale";
+import "../styles/PlantItem.css";
 
 function PlantItem(props) {
   const { id, name, cover, light, water, isSpecialOffer } = props;
@@ -6,8 +7,8 @@ function PlantItem(props) {
     <div key={id}>
       <div>
         <li className="lmj-plant-item">
+          <img src={cover} className="lmj-plant-item-cover" />
           {name}
-          {cover}
           <div>
             {isSpecialOffer && <div className="lmj-sales">Soldes !</div>}
             <CareScale careType={"light"} scaleValue={light} />

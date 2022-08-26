@@ -15,7 +15,7 @@ function ShoppingList() {
           </div>
         ))}
       </ul>
-      <ul className="lmj-plant-list">
+      <ul>
         {plantList.map((plant, index) => (
           <div key={index}>
             <PlantItem
