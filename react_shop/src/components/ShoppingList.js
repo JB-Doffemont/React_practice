@@ -1,6 +1,6 @@
 import { plantList } from "../data/plantList";
 import "../styles/shoppingList.css";
-import Plants from "./Plants";
+import PlantItem from "./PlantItem";
 
 function ShoppingList() {
   // Recupération des catégories uniques du tableau d'objet
@@ -16,7 +16,18 @@ function ShoppingList() {
         ))}
       </ul>
       <ul className="lmj-plant-list">
-        <Plants />
+        {plantList.map((plant, index) => (
+          <div key={index}>
+            <PlantItem
+              id={plant.id}
+              name={plant.name}
+              cover={plant.cover}
+              light={plant.light}
+              water={plant.water}
+              isSprecialOffer={plant.isSpecialOffer}
+            />
+          </div>
+        ))}
       </ul>
     </div>
   );
