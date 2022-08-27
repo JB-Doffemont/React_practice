@@ -4,9 +4,12 @@
 	display: flex;
 	flex-wrap: wrap;
 	max-width: 800px;
+	justify-content: center;
 }
 
-
+.lmj-shopping-list {
+	width: 100%;
+}
 
 .lmj-sales {
 	position: absolute;

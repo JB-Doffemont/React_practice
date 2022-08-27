@@ -7,7 +7,7 @@ function ShoppingList() {
   const categories = [...new Set(plantList.map((plant) => plant.category))];
 
   return (
-    <div>
+    <div className="lmj-shopping-list">
       <ul>
         {categories.map((category, index) => (
           <div key={index}>
@@ -15,7 +15,7 @@ function ShoppingList() {
           </div>
         ))}
       </ul>
-      <ul>
+      <ul className="lmj-plant-list">
         {plantList.map((plant, index) => (
           <div key={index}>
             <PlantItem
