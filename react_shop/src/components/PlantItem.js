@@ -2,12 +2,23 @@ import CareScale from "./CareScale";
 import "../styles/PlantItem.css";
 
 function PlantItem(props) {
+  // function handleClick(plantName) {
+  //   alert(`✨Vous avez cliqué sur : ${plantName}, très bon choix !`);
+  // }
+
+  // function handleClick(e) {
+  //   console.log("✨ Ceci est mon event :", e);
+  // }
   const { id, name, cover, light, water, isSpecialOffer } = props;
   return (
     <div key={id}>
       <div>
         <li className="lmj-plant-item">
-          <img src={cover} className="lmj-plant-item-cover" />
+          <img
+            src={cover}
+            alt={`${name} cover`}
+            className="lmj-plant-item-cover"
+          />
           {name}
           <div>
             {isSpecialOffer && <div className="lmj-sales">Soldes !</div>}
