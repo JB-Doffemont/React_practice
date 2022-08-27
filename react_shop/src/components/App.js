@@ -2,6 +2,7 @@ import "../App.css";
 
 import Banner from "./Banner.js";
 import Cart from "./Cart";
+import Footer from "./Footer";
 import ShoppingList from "./ShoppingList";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <Banner />
       <Cart />
       <ShoppingList />;
+      <Footer />
     </div>
   );
 }

@@ -36,16 +36,11 @@ function CareScale(props) {
   const range = [1, 2, 3];
 
   return (
-    <div>
+    <div onClick={() => careValue(scaleValue, careType)}>
       {range.map((rangeElem) =>
         // permet d'afficher le nombre d'icons en comparant scaleValue et rangeElem
         scaleValue >= rangeElem ? (
-          <span
-            key={rangeElem.toString()}
-            onClick={() => careValue(scaleValue, careType)}
-          >
-            {scaleType}
-          </span>
+          <span key={rangeElem.toString()}>{scaleType}</span>
         ) : null
       )}
     </div>
