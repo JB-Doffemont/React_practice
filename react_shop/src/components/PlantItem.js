@@ -2,13 +2,6 @@ import CareScale from "./CareScale";
 import "../styles/PlantItem.css";
 
 function PlantItem(props) {
-  // function handleClick(plantName) {
-  //   alert(`✨Vous avez cliqué sur : ${plantName}, très bon choix !`);
-  // }
-
-  // function handleClick(e) {
-  //   console.log("✨ Ceci est mon event :", e);
-  // }
   const { id, name, cover, light, water, isSpecialOffer } = props;
   return (
     <div key={id}>
