@@ -6,17 +6,34 @@ import Footer from "./Footer";
 import ShoppingList from "./ShoppingList";
 
 import "../styles/Layout.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
-  const [cart, updateCart] = useState([]);
+  const savedCart = localStorage.getItem("cart");
+  const [cart, updateCart] = useState(savedCart ? JSON.parse(savedCart) : []);
+  const [activeCategory, setActiveCategory] = useState("");
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
 
   return (
     <div>
       <Banner />
       <div className="lmj-layout-inner">
-        <Cart cart={cart} updateCart={updateCart} />
-        <ShoppingList cart={cart} updateCart={updateCart} />;
+        <Cart
+          cart={cart}
+          updateCart={updateCart}
+          setActiveCategory={setActiveCategory}
+          activeCategory={activeCategory}
+        />
+        <ShoppingList
+          cart={cart}
+          updateCart={updateCart}
+          setActiveCategory={setActiveCategory}
+          activeCategory={activeCategory}
+        />
+        ;
       </div>
 
       <Footer />

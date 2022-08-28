@@ -1,12 +1,9 @@
 import { plantList } from "../data/plantList";
 import "../styles/shoppingList.css";
 import PlantItem from "./PlantItem";
-import { useState } from "react";
 import Categories from "./Categories";
 
-function ShoppingList({ cart, updateCart }) {
-  const [activeCategory, setActiveCategory] = useState("");
-
+function ShoppingList({ cart, updateCart, setActiveCategory, activeCategory }) {
   function addToCart(name, price) {
     // On vérifie si la plante est déjà présente dans notre liste d'objet
     const currentPlantAdded = cart.find((plant) => plant.name === name);

@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {} from "../styles/cart.css";
 
 function Cart({ cart, updateCart }) {
   const [isOpen, setIsOpen] = useState(true);
+
   const total = cart.reduce(
     (previousValue, plantType) =>
       previousValue + plantType.amount * plantType.price,
