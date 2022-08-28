@@ -1,10 +1,11 @@
 import { plantList } from "../data/plantList";
 import "../styles/shoppingList.css";
 import PlantItem from "./PlantItem";
+import { useState } from "react";
+import Categories from "./Categories";
 
 function ShoppingList({ cart, updateCart }) {
-  // Recupération des catégories uniques du tableau d'objet
-  const categories = [...new Set(plantList.map((plant) => plant.category))];
+  const [activeCategory, setActiveCategory] = useState("");
 
   function addToCart(name, price) {
     // On vérifie si la plante est déjà présente dans notre liste d'objet
@@ -35,28 +36,24 @@ function ShoppingList({ cart, updateCart }) {
 
   return (
     <div className="lmj-shopping-list">
-      <ul>
-        {categories.map((category, index) => (
-          <div key={index}>
-            <li>{category}</li>
-          </div>
-        ))}
-      </ul>
+      <Categories
+        setActiveCategory={setActiveCategory}
+        activeCategory={activeCategory}
+      />
       <ul className="lmj-plant-list">
-        {plantList.map(
-          ({ id, cover, name, light, water, isSpecialOffer, price, index }) => (
+        {plantList.map(({ id, cover, name, light, water, price, category }) =>
+          activeCategory === category ? (
             <div key={id}>
               <PlantItem
-                id={id}
-                name={name}
                 cover={cover}
-                light={light}
+                name={name}
                 water={water}
-                isSprecialOffer={isSpecialOffer}
+                light={light}
+                price={price}
               />
               <button onClick={() => addToCart(name, price)}>Ajouter</button>
             </div>
-          )
+          ) : null
         )}
       </ul>
     </div>
