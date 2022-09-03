@@ -1,11 +1,34 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
+const Stack = createNativeStackNavigator();
+
+function SignUpForm() {
+  return (
+    <View style={styles.layout}>
+      <Text style={styles.title}>Sign Up Screen</Text>
+    </View>
+  );
+}
+
+function SignInForm() {
+  return (
+    <View style={styles.layout}>
+      <Text style={styles.title}>Sign In Screen</Text>
+    </View>
+  );
+}
 
 export default function App() {
   return (
-    <View style={styles.layout}>
-      <Text style={styles.title}>First screen</Text>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="SignIn" component={SignInForm}></Stack.Screen>
+        <Stack.Screen name="SignUp" component={SignUpForm}></Stack.Screen>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
